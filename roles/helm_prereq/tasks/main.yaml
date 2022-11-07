@@ -1,0 +1,22 @@
+---
+
+- name: Download helm install script
+  become: yes
+  get_url:
+    url: https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+    dest: /tmp/get_helm.sh
+    owner: root
+    group: root
+    mode: 0700
+
+- name: Execute helm install script
+  become: yes
+  command: bash /tmp/get_helm.sh
+
+- name: install python kubernetes core pre-requisites
+  pip:
+    name:
+      - jsonpatch
+      - pyyaml
+      - kubernetes
+      - kubernetes-validate
