@@ -17,9 +17,6 @@ create a file name "requirements.yml"
 ```yaml
 ---
 collections:
-    - name: community.general
-    version: 5.7.0
-    - name: ansible.posix
     - name: kubernetes.core
       version: 2.3.2
     - name: git+https://github.com/Frantche/ansible_collection_helm_wrapper.git,main

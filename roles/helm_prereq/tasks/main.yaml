@@ -20,3 +20,14 @@
       - pyyaml
       - kubernetes
       - kubernetes-validate
+
+- name: Install git
+  become: true
+  ansible.builtin.package:
+    name:
+      - git
+    state: present
+
+- name: Install helm diff
+  ignore_errors: true
+  ansible.builtin.command: helm plugin install https://github.com/databus23/helm-diff
