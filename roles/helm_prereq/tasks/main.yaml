@@ -7,10 +7,10 @@
     dest: /tmp/get_helm.sh
     owner: root
     group: root
-    mode: "0700"
+    mode: 0700
 
 - name: Execute helm install script
-  become: "yes"
+  become: true
   ansible.builtin.command: bash /tmp/get_helm.sh
 
 - name: Install python kubernetes core pre-requisites
@@ -22,12 +22,12 @@
       - kubernetes-validate
 
 - name: Install git
-  become: "yes"
+  become: true
   ansible.builtin.package:
     name:
       - git
     state: present
 
 - name: Install helm diff
-  ignore_errors: "yes"
+  ignore_errors: true
   ansible.builtin.command: helm plugin install https://github.com/databus23/helm-diff
