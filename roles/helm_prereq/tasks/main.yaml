@@ -1,7 +1,7 @@
 ---
 
 - name: Download helm install script
-  become: true
+  become: yes
   ansible.builtin.get_url:
     url: https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
     dest: /tmp/get_helm.sh
@@ -10,7 +10,7 @@
     mode: 0700
 
 - name: Execute helm install script
-  become: true
+  become: yes
   ansible.builtin.command: bash /tmp/get_helm.sh
 
 - name: Install python kubernetes core pre-requisites
