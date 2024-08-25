@@ -1,16 +1,16 @@
-namespace: frantchenco
+namespace: ivailo
 name: helm_wrapper
 version: 1.0.0
 readme: README.md
 authors:
-  - your name <example@domain.com>
+  - IvailoNikolov
 description: Helm wrapper to install helm package with retry
 license_file: 'LICENSE'
 tags: []
 # dependencies:
 #   "kubernetes.core":"*"
-repository: https://github.com/Frantche/ansible_collection_helm_wrapper
+repository: https://github.com/IvailoNikolov/ansible_collection_helm_ingress
 documentation: http://docs.example.com
 homepage: http://example.com
-issues: https://github.com/Frantche/ansible_collection_helm_wrapper/issues
+issues: https://github.com/IvailoNikolov/ansible_collection_helm_ingress/issues
 build_ignore: []

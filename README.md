@@ -19,7 +19,7 @@ create a file name "requirements.yml"
 collections:
     - name: kubernetes.core
       version: 2.3.2
-    - name: git+https://github.com/Frantche/ansible_collection_helm_wrapper.git,main
+    - name: git+https://github.com/IvailoNikolov/ansible_collection_helm.git master
 ```
 
 Before using the Kubernetes collection, you need to install it with the Ansible Galaxy CLI:
@@ -69,5 +69,5 @@ Inventory example:
   serial: 1
   become: yes
   roles:
-   - role: frantchenco.helm_wrapper.helm_prereq
+   - role: ivailo.helm_wrapper.helm_prereq
 ```
