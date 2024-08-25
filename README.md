@@ -1,4 +1,4 @@
-# Ansible Collection - frantchenco.helm_wrapper
+# Ansible Collection - ivailo.helm_wrapper
 
 Documentation for the collection.
 
@@ -7,7 +7,7 @@ Documentation for the collection.
 
 Name | Description
 --- | ---
-frantchenco.helm_wrapper.install|Install Helm Chart with Fail Safe retry and version check
+ivailo.helm_wrapper.install|Install Helm Chart with Fail Safe retry and version check
 
 ## Installation and Usage
 
@@ -36,7 +36,7 @@ You need to use a /.kube/config file to access the kubernetes cluster.
 ```yaml
 ---
 - name: "Deploy Name of your chart chart"
-  frantchenco.helm_wrapper.install:
+  ivailo.helm_wrapper.install:
     name: Release name to manage.
     chart_repo_url: Chart repository URL where to locate the requested chart.
     chart_version: Chart version to install. If this is not specified or invalides, the latest version is installed.
